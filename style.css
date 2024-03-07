@@ -1,0 +1,99 @@
+body {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin-left: 30vw;
+    margin-top: 2.5vh;
+    margin-bottom: 2.5vh;
+    width: 40vw;
+}
+
+bold {
+    font-weight: bold;
+}
+
+i {
+    font-style: italic;
+}
+
+h2 {
+    letter-spacing: 5px;
+    font-family: 'Raleway';
+    font-size: 1.35rem;
+    text-shadow: 0px 1px, 1px 0px, 1px 0px;
+    color: #98c2ae;
+    margin-bottom: 10px;
+}
+
+#informations {
+    text-align: end;
+    display: flex;
+    flex-flow: column wrap;
+    align-content: flex-end;
+    font-family: 'Raleway';
+}
+
+#nom-prenom {
+    background-color: #b6dac6;
+    font-size: 1.75rem;
+    font-weight: bolder;
+    text-align: center;
+    line-height: 3vh;
+    font-family: 'Raleway';
+    height: 3vh;
+}
+
+#mention {
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-align: center;
+    line-height: 3vh;
+    font-family: 'Raleway';
+    height: 3vh;
+}
+
+#formations ul {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+#formations li {
+    font-family: 'Raleway';
+}
+
+#certifications, #formations, .formation, .experience, #soft-skills, #langues, #competences-techniques, #competences-techniques div div ul, #experiences-professionnelles  {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+#competences-techniques div, #certifications div, #soft-skills div, #langues div {
+    display: flex;
+    flex-direction: row;
+}
+
+#competences-techniques div div, #certifications div div, #soft-skills div div, #langues div div {
+    width: 50%;
+    font-family: 'Raleway';
+}
+
+.experience ul {
+    width: 95%;
+    margin-left: 5%;
+    list-style: square;
+}
+
+.experience li::marker {
+    color:#98c2ae;
+}
+
+#experiences-professionnelles ul {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+#experiences-professionnelles li {
+    font-family: 'Raleway';
+}
