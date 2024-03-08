@@ -1,0 +1,20 @@
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  s3_upload:
+    runs-on: ubuntu-latest
+    steps:
+      - name: S3 uploader
+        uses: a-sync/s3-uploader@2.0.1
+        with:
+            args: --acl public-read
+        env:
+            AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+            AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+            AWS_REGION: 'eu-west-3'
+            S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
+            S3_KEY: ${{ secrets.S3_KEY }}
+            FILE: ./*
