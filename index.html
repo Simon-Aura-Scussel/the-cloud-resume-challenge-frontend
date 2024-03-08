@@ -11,148 +11,175 @@
 
     <body>
 
-        <div id="informations">
-            <p>...</p>
-            <p>...</p>
+        <script type="text/javascript">
+            fetch("https://06ec0sp045.execute-api.us-east-1.amazonaws.com/default/addVisitor", { method: "POST" })
+                .then(async response => {
+                    const data = await response.json();
+                    document.getElementById("visiteurs-compteur").innerText = `${data.visitors} visiteurs`;
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+        </script>
+
+        <div id="visiteurs">
+            <h3 id="visiteurs-compteur">...</h3>
         </div>
 
-        <div id="nom-prenom">
-            <h1>Simon AURA--SCUSSEL</h1>
-        </div>
+        <div id="cv">
 
-        <div id="mention">
-            <p>ALTERNANCE (DEUX ANS)</p>
-        </div>
-        
-        <!-- FORMATIONS -->
-        <div id="formations">
-            <h2>FORMATIONS</h2>
-            <ul>
-                <li>
-                    <div class="formation">
-                        <p><bold>Octobre 2025 - Juin 2025</bold> - Association Des Néticiens</p>
-                        <p>BAC + 5 -  INGÉNIEUR SYSTÈMES RÉSEAUX ET CYBERSÉCURITÉ</p>
-                        <br>
-                        <p><i>Formation d'un an sur la conception, le déploiement, la maintenance et la sécurisation des systèmes d'information, couvrant les aspects techniques, juridiques et organisationnels.</i></p>
-                    </div>
-                </li>
-                <li>
-                    <div class="formation">
-                        <p><bold>Octobre 2024 - Juin 2024</bold> - Association Des Néticiens</p>
-                        <p>BAC + 4 - ADMINISTRATEUR D’INFRASTRUCTURES SÉCURISÉES</p>
-                        <br>
-                        <p><i>Formation sur 1 an couvrant la conception, le déploiement, l'administration, la supervision et la sécurisation des infrastructures informatiques.</i></p>
-                    </div>
-                </li>
-                <li>
-                    <div class="formation">
-                        <p><bold>Actuellement</bold> - IUT de La Rochelle</p>
-                        <p>3ème année Bachelor Universitaire de Technologie (BUT)</p>
-                        <p>Réseaux & Télécommunications - Parcours Cybersécurité</p>
-                        <br>
-                        <p><i>Formation en 3 ans englobant la conception, le déploiement, l’administration, la supervision et la sécurisation des réseaux informatiques et de télécommunications.</i></p>
-                    </div>
-                </li>
-            </ul>
-        </div>
-
-        <!-- COMPETENCES TECHNIQUES -->
-        <div id="competences-techniques">
-            <h2>COMPÉTENCES TECHNIQUES</h2>
-            <div>
-                <div>
-                    <ul>
-                        <li><bold>Sécurité Réseau</bold> : Stormshield, IDS-IPS, AAA</li>
-                        <li><bold>Supervision</bold> : SIEM (Splunk & Wazuh), Zabbix</li>
-                        <li><bold>DevOps</bold> : Jenkins, Kubernetes, Docker, Ansible</li>
-                        <li><bold>Scripting</bold> : Bash, Powershell</li>
-                        <li><bold>Base de données</bold> : MariaDB, SQLite, MongoDB</li>
-                    </ul>
-                </div>
-                <div>
-                    <ul>
-                        <li><bold>AWS</bold> : EC2, S3, Lambda, RDS, Aurora, IAM</li>
-                        <li><bold>Réseaux</bold> : VLAN, Routeurs, 802.1X, VPN</li>
-                        <li><bold>Virtualisation</bold> : VMWare, Proxmox, Ceph</li>
-                        <li><bold>Programmation</bold> : PHP, Python, C#, Javascript</li>
-                        <li><bold>Systèmes</bold> : Linux (Debian), Windows (Server)</li>
-                    </ul>
-                </div>
+            <div id="informations">
+                <p>...</p>
+                <p>...</p>
             </div>
-        </div>
-
-        <!-- CERTIFICATIONS -->
-        <div id="certifications">
-            <h2>CERTIFICATIONS</h2>
-            <div>
-                <div>
-                    <p><bold>CISCO</bold> : CCNA2, CCNA3, DevNet, Cyber Ops</p>
-                </div>
-                <div>
-                    <p><bold>Stormshield</bold> : CSNA</p>
-                </div>
+    
+            <div id="nom-prenom">
+                <h1>Simon AURA--SCUSSEL</h1>
             </div>
-        </div>
-
-        <!-- EXPERIENCES PROFESSIONNELLES  -->
-        <div id="experiences-professionnelles">
-            <h2>EXPÉRIENCES PROFESSIONNELLES</h2>
-            <ul>
-                <li>
-                    <div class="experience">
-                        <p><bold>Février 2024 - Juin 2024 - Entrepreneur</bold></p>
-                        <p><bold>PÉPITE ECA - LA ROCHELLE</bold></p>
-                        <br></br>
+    
+            <div id="mention">
+                <p>ALTERNANCE (DEUX ANS)</p>
+            </div>
+            
+            <!-- FORMATIONS -->
+            <div id="formations">
+                <h2>FORMATIONS</h2>
+                <ul>
+                    <li>
+                        <div class="formation">
+                            <p><bold>Octobre 2025 - Juin 2025</bold> - Association Des Néticiens</p>
+                            <p>BAC + 5 -  <a href="https://formations-neticiens.net/formation/ingenieur-cybersecurite/">INGÉNIEUR SYSTÈMES RÉSEAUX ET CYBERSÉCURITÉ</a></p>
+                            <br>
+                            <p><i>Formation d'un an sur la conception, le déploiement, la maintenance et la sécurisation des systèmes d'information, couvrant les aspects techniques, juridiques et organisationnels.</i></p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="formation">
+                            <p><bold>Octobre 2024 - Juin 2024</bold> - Association Des Néticiens</p>
+                            <p>BAC + 4 - <a href="https://formations-neticiens.net/formation/administrateur-dinfrastructures-securisees-en-apprentissage/">ADMINISTRATEUR D’INFRASTRUCTURES SÉCURISÉES</a></p>
+                            <br>
+                            <p><i>Formation sur 1 an couvrant la conception, le déploiement, l'administration, la supervision et la sécurisation des infrastructures informatiques.</i></p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="formation">
+                            <p><bold>Actuellement</bold> - IUT de La Rochelle</p>
+                            <p>BAC + 3 - <a href="https://www.iut-larochelle.fr/formations/departement-reseaux-telecommunications/but-reseaux-telecommunications/">Bachelor Universitaire de Technologie (BUT)</a></p>
+                            <p>Réseaux & Télécommunications - Parcours Cybersécurité</p>
+                            <br>
+                            <p><i>Formation en 3 ans englobant la conception, le déploiement, l’administration, la supervision et la sécurisation des réseaux informatiques et de télécommunications.</i></p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+    
+            <!-- COMPETENCES TECHNIQUES -->
+            <div id="competences-techniques">
+                <h2>COMPÉTENCES TECHNIQUES</h2>
+                <div>
+                    <div>
                         <ul>
-                            <li>Développement Full-Stack d'un SaaS (MERN Stack)</li>
-                            <li>Implémentation DevOps & AWS (Jenkins, Ansible, IaaC)</li>
+                            <li><bold>Sécurité Réseau</bold> : Stormshield, IDS-IPS, AAA</li>
+                            <li><bold>Supervision</bold> : SIEM (Splunk & Wazuh), Zabbix</li>
+                            <li><bold>DevOps</bold> : Jenkins, Kubernetes, Docker, Ansible</li>
+                            <li><bold>Scripting</bold> : Bash, Powershell</li>
+                            <li><bold>Base de données</bold> : MariaDB, SQLite, MongoDB</li>
                         </ul>
                     </div>
-                </li>
-                <li>
-                    <div class="experience">
-                        <p><bold>Avril 2023 - Juillet 2023 - Consultant Sécurité SIRH</bold></p>
-                        <p><bold>CEGEDIM BUSINESS SERVICES - NANTES</bold></p>
-                        <br></br>
+                    <div>
                         <ul>
-                            <li>Développement d'un script Python pour valider les vulnérabilités externes chez Cegedim SRH et générer un rapport automatisé</li>
-                            <li>Mise en place rigoureuse et stratégique de mécanismes de sécurité dans le SIRH, garantissant la protection des données sensibles.</li>
+                            <li><bold>AWS</bold> : EC2, S3, Lambda, RDS, Aurora, IAM</li>
+                            <li><bold>Réseaux</bold> : VLAN, Routeurs, 802.1X, VPN</li>
+                            <li><bold>Virtualisation</bold> : VMWare, Proxmox, Ceph</li>
+                            <li><bold>Programmation</bold> : PHP, Python, C#, Javascript</li>
+                            <li><bold>Systèmes</bold> : Linux (Debian), Windows (Server)</li>
                         </ul>
                     </div>
-                </li>
-            </ul>
-        </div>
-
-        <!-- SOFT SKILLS  -->
-        <div id="soft-skills">
-            <h2>SOFT SKILLS</h2>
-            <div>
-                <div>
-                    <p><bold>Initiative</bold></p>
-                </div>
-                <div>
-                    <p><bold>Travail d'équipe</bold></p>
-                </div>
-                <div>
-                    <p><bold>Curiosité</bold></p>
                 </div>
             </div>
-        </div>
-
-        <!-- LANGUES  -->
-        <div id="langues">
-            <h2>LANGUES</h2>
-            <div>
+    
+            <!-- CERTIFICATIONS -->
+            <div id="certifications">
+                <h2>CERTIFICATIONS</h2>
                 <div>
-                    <p><bold>Français</bold></p>
+                    <div>
+                        <p><bold>CISCO</bold> : <a href="https://www.credly.com/badges/19732370-e0a1-4369-b113-f01111a8c69b/public_url">CCNA2</a> <a href="https://www.credly.com/badges/0d1e2f14-e643-4e8b-948f-bbc803e9d228/public_url">CCNA3</a> <a href="https://www.credly.com/badges/4de06e3b-4d7d-44c9-b335-844b194134c2/public_url">DevNet</a> <a href="https://www.credly.com/badges/a5cdfbbe-3c44-4496-878e-4906a4d7ccae/public_url">CyberOps</a></p>
+                    </div>
+                    <div>
+                        <p><bold>Stormshield</bold> : CSNA</p>
+                    </div>
                 </div>
                 <div>
-                    <p><bold>Anglais</bold></p>
-                </div>
-                <div>
-                    <p><bold>LSF</bold></p>
+                    <div>
+                        <p><bold>AWS</bold> : <a href="https://www.credly.com/badges/97e57e05-250a-4d1b-b173-e64b845245e4/public_url">AWS Certified Cloud Practitioner</a></p>
+                    </div>
+                    <div>
+                        <p><bold>FORTINET</bold> : NSE1 NSE2 NSE3</p>
+                    </div>
                 </div>
             </div>
+    
+            <!-- EXPERIENCES PROFESSIONNELLES  -->
+            <div id="experiences-professionnelles">
+                <h2>EXPÉRIENCES PROFESSIONNELLES</h2>
+                <ul>
+                    <li>
+                        <div class="experience">
+                            <p><bold>Février 2024 - Juin 2024 - Entrepreneur</bold></p>
+                            <p><bold>PÉPITE ECA - LA ROCHELLE</bold></p>
+                            <br></br>
+                            <ul>
+                                <li>Développement Full-Stack d'un SaaS (MERN Stack)</li>
+                                <li>Implémentation DevOps & AWS (Jenkins, Ansible, IaaC)</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="experience">
+                            <p><bold>Avril 2023 - Juillet 2023 - Consultant Sécurité SIRH</bold></p>
+                            <p><bold>CEGEDIM BUSINESS SERVICES - NANTES</bold></p>
+                            <br></br>
+                            <ul>
+                                <li>Développement d'un script Python pour valider les vulnérabilités externes et générer un rapport automatisé</li>
+                                <li>Mise en place rigoureuse et stratégique de mécanismes de sécurité dans le SIRH, garantissant la protection des données sensibles.</li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+    
+            <!-- SOFT SKILLS  -->
+            <div id="soft-skills">
+                <h2>SOFT SKILLS</h2>
+                <div>
+                    <div>
+                        <p><bold>Initiative</bold></p>
+                    </div>
+                    <div>
+                        <p><bold>Travail d'équipe</bold></p>
+                    </div>
+                    <div>
+                        <p><bold>Curiosité</bold></p>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- LANGUES  -->
+            <div id="langues">
+                <h2>LANGUES</h2>
+                <div>
+                    <div>
+                        <p><bold>Français</bold></p>
+                    </div>
+                    <div>
+                        <p><bold>Anglais</bold></p>
+                    </div>
+                    <div>
+                        <p><bold>LSF</bold></p>
+                    </div>
+                </div>
+            </div>
+
         </div>
 
     </body>
