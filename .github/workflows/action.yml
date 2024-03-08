@@ -17,4 +17,4 @@ jobs:
             AWS_REGION: 'eu-west-3'
             S3_BUCKET: ${{ secrets.S3_BUCKET }}
             S3_KEY: ${{ secrets.S3_KEY }}
-            FILE: ./index.html ./style.css ./reset.css
+            FILE: index.html style.css reset.css
