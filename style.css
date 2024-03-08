@@ -1,4 +1,4 @@
-body {
+#cv {
     display: flex;
     flex-direction: column;
     gap: 50px;
@@ -96,4 +96,44 @@ h2 {
 
 #experiences-professionnelles li {
     font-family: 'Raleway';
+}
+
+#visiteurs {
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    background-color: #b6dac6;
+    float: right;
+    width: 8vw;
+    height: 3.5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#visiteurs h3 {
+    font-family: 'Raleway';
+    font-size: 1.25rem;
+}
+
+@media all and (orientation: portrait) {
+
+    #cv {
+        margin-left: 10vw;
+        margin-top: 2.5vh;
+        margin-bottom: 2.5vh;
+        width: 80vw;
+    }
+
+    #visiteurs {
+        width: 10vw;
+    }
+
+    #visiteurs h3 {
+        text-align: center;
+        font-size: 1.5rem;
+    }
+
+    
+
 }
