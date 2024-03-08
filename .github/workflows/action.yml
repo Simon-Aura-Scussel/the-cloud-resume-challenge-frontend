@@ -20,7 +20,7 @@ jobs:
 
       - name: Interact with object storage
         run: |
-          pwd
+          ls
           s3cmd put ./../style.css --mime-type 'text/css' --acl-public s3://the-cloud-resume-challenge-bucket/style.css
           s3cmd put ./../reset.css --mime-type 'text/css' --acl-public s3://the-cloud-resume-challenge-bucket/reset.css
           s3cmd put ./../index.html --mime-type 'text/html' --acl-public s3://the-cloud-resume-challenge-bucket/index.html
