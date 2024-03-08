@@ -10,6 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 
+      - uses: actions/checkout@v2
+
       - name: Set up S3cmd cli tool
         uses: s3-actions/s3cmd@v1.5.0
         with:
@@ -20,7 +22,6 @@ jobs:
 
       - name: Interact with object storage
         run: |
-          ls the-cloud-resume-challenge-frontend/
-          s3cmd put ./../style.css --mime-type 'text/css' --acl-public s3://the-cloud-resume-challenge-bucket/style.css
-          s3cmd put ./../reset.css --mime-type 'text/css' --acl-public s3://the-cloud-resume-challenge-bucket/reset.css
-          s3cmd put ./../index.html --mime-type 'text/html' --acl-public s3://the-cloud-resume-challenge-bucket/index.html
+          s3cmd put style.css --mime-type 'text/css' --acl-public s3://the-cloud-resume-challenge-bucket/style.css
+          s3cmd put reset.css --mime-type 'text/css' --acl-public s3://the-cloud-resume-challenge-bucket/reset.css
+          s3cmd put index.html --mime-type 'text/html' --acl-public s3://the-cloud-resume-challenge-bucket/index.html
