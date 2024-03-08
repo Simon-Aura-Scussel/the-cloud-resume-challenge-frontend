@@ -18,4 +18,4 @@ jobs:
           s3cmd --access_key="$ACCESS_KEY" --secret_key="$SECRET_KEY" put index.html style.css reset.css s3://the-cloud-resume-challenge-bucket/
         env:
           ACCESS_KEY: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          SECRET_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}"
+          SECRET_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
