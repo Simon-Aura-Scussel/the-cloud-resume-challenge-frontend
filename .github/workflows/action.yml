@@ -14,13 +14,14 @@ jobs:
         uses: s3-actions/s3cmd@v1.5.0
         with:
           provider: aws # default is linode
-          region: 'eu-central-1'
+          region: 'eu-west-3'
           access_key: ${{ secrets.AWS_ACCESS_KEY_ID }}
           secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
 
       - name: Interact with object storage
         run: |
           ls
+          ls ..
           s3cmd put ./../style.css --mime-type 'text/css' --acl-public s3://the-cloud-resume-challenge-bucket/style.css
           s3cmd put ./../reset.css --mime-type 'text/css' --acl-public s3://the-cloud-resume-challenge-bucket/reset.css
           s3cmd put ./../index.html --mime-type 'text/html' --acl-public s3://the-cloud-resume-challenge-bucket/index.html
