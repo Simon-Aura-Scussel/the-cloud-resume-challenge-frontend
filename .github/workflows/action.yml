@@ -9,10 +9,17 @@ jobs:
   s3_upload:
     runs-on: ubuntu-latest
     steps:
-      - name: Copy files to S3
+
+      - name: Set up S3cmd cli tool
+        uses: s3-actions/s3cmd@v1.5.0
+        with:
+          provider: aws # default is linode
+          region: 'eu-central-1'
+          access_key: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+
+      - name: Interact with object storage
         run: |
-          sudo apt-get update && sudo apt-get install -y s3cmd
-          s3cmd --access_key="$ACCESS_KEY" --secret_key="$SECRET_KEY" put index.html style.css reset.css s3://the-cloud-resume-challenge-bucket/
-        env:
-          ACCESS_KEY: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          SECRET_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          s3cmd put style.css --mime-type 'text/css' --acl-public s3://the-cloud-resume-challenge-bucket/style.css
+          s3cmd put reset.css --mime-type 'text/css' --acl-public s3://the-cloud-resume-challenge-bucket/reset.css
+          s3cmd put index.html --mime-type 'text/html' --acl-public s3://the-cloud-resume-challenge-bucket/index.html
