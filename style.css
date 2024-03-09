@@ -34,13 +34,19 @@ h2 {
 }
 
 #nom-prenom {
-    background-color: #b6dac6;
     font-size: 1.75rem;
     font-weight: bolder;
     text-align: center;
     line-height: 3vh;
     font-family: 'Raleway';
     height: 3vh;
+    display: flex;
+    align-items: center;
+}
+
+#nom-prenom h1 {
+    background-color: #b6dac6;
+    width: 100%;
 }
 
 #mention {
@@ -114,6 +120,11 @@ h2 {
 #visiteurs h3 {
     font-family: 'Raleway';
     font-size: 1.25rem;
+}
+
+#pic {
+    width: 5.5vw;
+    height: 5.5vw;
 }
 
 @media all and (orientation: portrait) {
