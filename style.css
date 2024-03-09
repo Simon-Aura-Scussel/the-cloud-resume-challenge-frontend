@@ -145,6 +145,9 @@ h2 {
         font-size: 1.5rem;
     }
 
-    
+    #pic {
+        width: 15vw;
+        height: 15vw;
+    }
 
 }
