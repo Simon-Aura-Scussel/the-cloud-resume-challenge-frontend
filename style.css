@@ -44,16 +44,28 @@ h2 {
     align-items: center;
 }
 
+#nom-prenom div {
+    width: 100%;
+}
+
 #nom-prenom h1 {
+    font-size: 1.30rem;
+    color: black;
     background-color: #b6dac6;
     width: 100%;
 }
 
+#nom-prenom h2 {
+    font-size: 1.80rem;
+    color: black;
+    background-color: #b6dac6;
+}
+
 #mention {
-    font-size: 1.25rem;
+    font-size: 1.10rem;
     font-weight: bold;
     text-align: center;
-    line-height: 3vh;
+    line-height: 2.5vh;
     font-family: 'Raleway';
     height: 3vh;
 }
